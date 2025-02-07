@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Services</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #fff;
+    }
+
+    header {
+      background: black;
+      color: #9b4de5;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    #services {
+      margin: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    #services h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .service {
+      background: linear-gradient(135deg, #222, #333);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    .service img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .service h3 {
+      color: #1abc9c;
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    .service p,
+    .service ul li {
+      color: #ddd;
+    }
+
+    .service ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .service ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .service ul li::before {
+      content: "✔";
+      margin-right: 10px;
+      color: #1abc9c;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>IT Services</h1>
+  </header>
+
+  <section id="services">
+    <div class="service">
+      <img src="web-developer.jpg" alt="Web Development">
+      <h3>Web Development</h3>
+      <p>We specialize in creating custom websites tailored to meet the unique needs of your business. Whether you're
+        looking for a simple landing page or a complex web application, we have the expertise to build a responsive,
+        user-friendly site that converts visitors into customers.</p>
+      <ul>
+        <li>Responsive Design</li>
+        <li>E-commerce Solutions</li>
+        <li>Custom Web Applications</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="cloud computing.jpg" alt="Cloud Solutions">
+      <h3>Cloud Solutions</h3>
+      <p>Our cloud services provide scalable, secure, and cost-effective solutions to help businesses migrate, manage,
+        and optimize their infrastructure. We can help you move to the cloud with ease, ensuring high availability,
+        performance, and security.</p>
+      <ul>
+        <li>Cloud Hosting & Infrastructure</li>
+        <li>Cloud Migration</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="ai-automation.jpg" alt="AI & Automation">
+      <h3>AI & Automation</h3>
+      <p>Transform your business processes with artificial intelligence and automation. We integrate AI solutions to
+        automate repetitive tasks, improve decision-making, and optimize operations. Our AI-driven approach will help
+        you stay ahead of the competition in today's fast-paced market.</p>
+      <ul>
+        <li>AI Chatbots & Virtual Assistants</li>
+        <li>Machine Learning Solutions</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="it-consulting.webp" alt="IT Consulting">
+      <h3>IT Consulting</h3>
+      <p>Our IT consulting services provide expert guidance on technology strategy, digital transformation, and IT
+        governance. We help businesses design and implement solutions that drive growth and innovation, with a focus on
+        achieving long-term success through technology.</p>
+      <ul>
+        <li>Technology Strategy</li>
+        <li>Digital Transformation</li>
+        <li>Enterprise Architecture</li>
+        <li>IT Governance & Risk Management</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="mobile-app-development.jpg" alt="Mobile App Development">
+      <h3>Mobile App Development</h3>
+      <p>We build intuitive and high-performance mobile applications for both Android and iOS platforms. Our apps are
+        designed to engage users and help your business reach a wider audience with seamless experiences.</p>
+      <ul>
+        <li>Android & iOS Development</li>
+        <li>Cross-platform Apps (React Native, Flutter)</li>
+        <li>Mobile App UI/UX Design</li>
+        <li>App Maintenance & Support</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="cyber-security.webp" alt="Cybersecurity">
+      <h3>Cybersecurity</h3>
+      <p>Protect your business from cyber threats with our comprehensive cybersecurity solutions. From network security
+        to data encryption, we provide the tools and expertise to safeguard your business operations and sensitive data.
+      </p>
+      <ul>
+        <li>Network Security</li>
+        <li>Data Encryption</li>
+        <li>Vulnerability Assessments</li>
+        <li>Penetration Testing</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="blockchain.webp" alt="Blockchain Development">
+      <h3>Blockchain Development</h3>
+      <p>Our blockchain development services enable businesses to leverage the power of distributed ledger technology.
+        Whether you're looking to implement cryptocurrency solutions or smart contracts, our blockchain experts can
+        create secure and scalable solutions.</p>
+      <ul>
+        <li>Smart Contracts</li>
+        <li>Cryptocurrency Solutions</li>
+        <li>Decentralized Applications</li>
+        <li>Blockchain Consulting</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
