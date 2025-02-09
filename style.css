@@ -82,7 +82,6 @@ body {
 .title span.letter {
     display: inline-block;
     animation: rotateLetter 25s linear infinite;
-    /* Slowed down effect */
 }
 
 /* Apply delay to each letter */
@@ -182,10 +181,10 @@ body {
 }
 
 /* RESEARCH REPORTS */
-.header-title {
+ .header-title {
     font-size: 38px;
     font-weight: bold;
-}
+} 
 
 .header-p {
     color: #9b4de5;
@@ -196,7 +195,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    /* Add space between boxes */
     font-size: 24px;
 }
 
@@ -281,9 +279,10 @@ body {
 .sub-title {
     font-size: 38px;
     font-weight: bold;
-    color: white;
+    color:#9b4de5 ;
     margin-bottom: 15px;
     text-align: center;
+
 }
 
 /* Mission & Vision Section */
@@ -309,7 +308,7 @@ body {
 }
 
 .info-content h3 {
-    color: #9b4de5;
+    color: white;
     font-size: 30px;
     font-weight: bold;
 }
@@ -392,9 +391,7 @@ body {
 
 .custom-btn {
     background-color: #9b4de5;
-    /* Purple background */
     color: white;
-    /* White text */
     border: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -476,4 +473,71 @@ body {
     border: none;
     padding: 5px;
     cursor: pointer;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    color: #9b4de5;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    color: #9b4de5;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
