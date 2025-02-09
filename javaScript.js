@@ -11,7 +11,15 @@ chatToggle.addEventListener("click", function() {
     chatbox.style.display = "block";
     chatMessages.innerHTML = "";  // Clear previous messages
     chatStage = 1;
-    addMessage("bot", "Hello! How can I help you?");
+    addMessage("AI", "Hello! How can I help you?");
+});
+
+// Enter key button
+chatInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); 
+        chatSend.click(); 
+    }
 });
 
 chatSend.addEventListener("click", function() {
@@ -32,8 +40,8 @@ function addMessage(sender, text) {
     messageDiv.classList.add("message", sender);
     
     // Add a tag to show who is speaking
-    if (sender === "bot") {
-        text = "🤖 Bot: " + text;
+    if (sender === "AI") {
+        text = "🤖 AI: " + text;
     } else {
         text = "👤 User: " + text;
     }
@@ -60,7 +68,7 @@ function addJobOptions() {
         
         button.onclick = function() {
             addMessage("user", option);
-            addMessage("bot", "Please provide your contact number.");
+            addMessage("AI", "Please provide your contact number.");
             chatStage = 4;
         };
         chatMessages.appendChild(button);
@@ -70,11 +78,11 @@ function addJobOptions() {
 function handleChat(userMessage) {
     switch (chatStage) {
         case 1:
-            addMessage("bot", "We only offer job opportunities. Would you like to know more?");
+            addMessage("AI", "We only offer job opportunities. Would you like to know more?");
             chatStage = 2;
             break;
         case 2:
-            addMessage("bot", "Please select a job option:");
+            addMessage("AI", "Please select a job option:");
             addJobOptions();
             chatStage = 3;
             break;
@@ -83,13 +91,31 @@ function handleChat(userMessage) {
             break;
         case 4:
             if (/^\d{10}$/.test(userMessage)) {
-                addMessage("bot", "Thank you! We will contact you soon.");
+                addMessage("AI", "Thank you! We will contact you soon.");
                 setTimeout(() => {
                     chatbox.style.display = "none";  // Close chat automatically
                 }, 2000);
             } else {
-                addMessage("bot", "Please enter a valid 10-digit phone number.");
+                addMessage("AI", "Please enter a valid 10-digit phone number.");
             }
             break;
     }
 }
+
+/*smoot*/
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, /* Adjusts for fixed navbar */
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
